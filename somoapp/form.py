@@ -36,3 +36,46 @@ class RegisterForm(forms.Form):
                                                'class':'form-control'
                                            }
                                        ))
+
+
+class ProfileForm(forms.Form):
+    mobile = forms.CharField(label='Mobile', max_length=13,
+                             widget=forms.TextInput(
+                                 attrs={
+                                     'class': 'form-control'
+                                 }
+                             ))
+    reg = forms.CharField(label='Reg Number', max_length=50,
+                          widget=forms.TextInput(
+                              attrs={
+                                  'class': 'form-control'
+                              }
+                          ))
+    firstname = forms.CharField(label='Firstname', max_length=80,
+                                widget=forms.TextInput(
+                                    attrs={
+                                        'class': 'form-control'
+                                    }
+                                ))
+    lastname = forms.CharField(label='Lastname', max_length=80,
+                               widget=forms.TextInput(
+                                   attrs={
+                                       'class': 'form-control'
+                                   }
+                               ))
+
+
+
+class PasswordForm(forms.Form):
+    new_pass = forms.CharField(label='New Password',max_length=50,
+                               widget=forms.PasswordInput(
+                                   attrs={
+                                       'class':'form-control'
+                                   }
+                               ))
+    new_password = forms.CharField(label='Confirm Password',max_length=50,
+                                   widget=forms.PasswordInput(
+                                       attrs={
+                                           'class':'form-control'
+                                       }
+                                   ))

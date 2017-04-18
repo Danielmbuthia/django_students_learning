@@ -4,13 +4,15 @@ from __future__ import unicode_literals
 from datetime import datetime
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
-from somoapp.form import LoginForm, RegisterForm
+from somoapp.form import LoginForm, RegisterForm, ProfileForm, PasswordForm
+from somoapp.models import UserAccount
 
 
 def login_d(request):
@@ -23,6 +25,7 @@ def login_d(request):
         try:
             user = User.objects.get(email=email)
             user = authenticate(username=user, password=password)
+
             if user is not None:
                 if user.is_active:
                     login(request, user)
@@ -38,7 +41,13 @@ def login_d(request):
         except User.DoesNotExist:
             messages.add_message(request, messages.INFO, 'Your account does not exist')
             return redirect('/register')
-    return render(request,'login.html',{'form':form})
+
+    if request.user.is_authenticated():
+
+        return redirect('/profile')
+        messages.add_message(request, messages.INFO, 'Please update your profile')
+    else:
+        return render(request, 'login.html', {'form': form})
 
 
 def register(request):
@@ -50,6 +59,7 @@ def register(request):
             username = form_register.cleaned_data.get('username')
             password = form_register.cleaned_data.get('password')
             confirm_password = form_register.cleaned_data.get('password_confirm')
+            print(email)
             #check the sxistence of the user
             user = User.objects.filter(email=email).count()
             if user>0:
@@ -65,27 +75,70 @@ def register(request):
                         password=password,
                         last_login=datetime.now()
                     )
-                    #hash password
-                    user.set_password(password)
-                    #save data
-                    user.save()
-                    #redirect
-                    messages.add_message(request,messages.INFO,'created successfully')
-                    return redirect('/login')
+                    if len(password)<8:
+                        messages.add_message(request,messages.INFO,'password must be atleast 8 characters')
+                        return redirect('/register')
+                    else:
+                        # hash password
+                        user.set_password(password)
+                        # save data
+                        user.save()
+                        # redirect
+                        messages.add_message(request, messages.INFO, 'created successfully')
+                        return redirect('/login')
+
                 else:
                     messages.add_message(request,messages.INFO,"password does not match")
                     return redirect('/register')
 
     else:
         form_register = RegisterForm()
-    return render(request,'register.html',{'form':form_register})
+    if request.user.is_authenticated():
+        messages.add_message(request,messages.INFO,'please update your profile to proceed')
+        return redirect('/profile')
+    else:
+        return render(request, 'register.html', {'form': form_register})
 
 
 def logout_d(request):
     logout(request)
-    messages.add_message(request,messages.INFO,"logout done")
     return redirect('/login')
 
 
+@login_required
 def profile(request):
-    return render(request,'profile.html',{})
+    current_user = request.user
+    if request.method == 'POST':
+        form_profile = ProfileForm(request.POST)
+        form_password = PasswordForm(request.POST)
+        if form_password.is_valid():
+            new = form_password.cleaned_data.get('new_pass')
+            confirm = form_password.cleaned_data.get('new_password')
+            if new == confirm:
+                user_model = User.objects.filter(username=current_user.username).first()
+                if len(new) < 8:
+                    messages.add_message(request, messages.INFO, 'password must be atleast 8 characters')
+                    return redirect('/profile')
+                else:
+                    user_model.set_password(new)
+                    user_model.save()
+
+                    messages.add_message(request, messages.INFO, 'Password Change Successfully')
+                    return redirect('/login')
+            else:
+                messages.add_message(request,messages.INFO,'password did not match')
+        else:
+            if form_profile.is_valid():
+                print('valid')
+            else:
+                print('not valid')
+    else:
+        form_password=PasswordForm()
+        form_profile = ProfileForm()
+
+    return render(request,'profile.html',{'form':form_profile,
+                                          'form_password':form_password })
+
+
+def account(request):
+    return HttpResponse('account dashboard')
