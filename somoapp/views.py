@@ -12,7 +12,7 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 from somoapp.form import LoginForm, RegisterForm, ProfileForm, PasswordForm
-from somoapp.models import UserAccount
+from somoapp.models import UserAccount,Course, Book
 
 
 def login_d(request):
@@ -30,7 +30,7 @@ def login_d(request):
                 if user.is_active:
                     login(request, user)
 
-                    return redirect('/profile')
+                    return redirect('/')
                 else:
                     messages.add_message(request, messages.INFO, 'Your account is not active')
                     return redirect('/register')
@@ -129,9 +129,17 @@ def profile(request):
                 messages.add_message(request,messages.INFO,'password did not match')
         else:
             if form_profile.is_valid():
-                print('valid')
-            else:
-                print('not valid')
+                lastname = form_profile.cleaned_data.get('lastname')
+                firstname = form_profile.cleaned_data.get('firstname')
+                user_model = User.objects.filter(username=current_user.username).first()
+                user_model.first_name = firstname
+                user_model.last_name = lastname
+                user_model.save()
+
+                return redirect('/')
+                messages.add_message(request, messages.INFO, 'update done successfully ')
+
+
     else:
         form_password=PasswordForm()
         form_profile = ProfileForm()
@@ -140,5 +148,52 @@ def profile(request):
                                           'form_password':form_password })
 
 
+@login_required
 def account(request):
-    return HttpResponse('account dashboard')
+    courses = Course.objects.all()
+    books = Book.objects.all()
+    context = {
+        'courses': courses,
+        'books': books
+    }
+    return render(request, 'account.html', context)
+
+
+@login_required
+def download(request):
+    return render(request,'download.html',{})
+
+
+@login_required
+def upload(request):
+    return render(request,'upload.html',{})
+
+
+@login_required
+def requests(request):
+    return render(request,'requests.html',{})
+
+
+@login_required
+def users(request):
+    users = User.objects.all()
+    context = {
+        'users':users
+    }
+    return render(request,'users.html',context)
+
+
+@login_required
+def system(request):
+    return render(request,'system.html',{})
+
+
+@login_required
+def dashboard(request):
+    courses = Course.objects.all()
+    books = Book.objects.all()
+    context = {
+        'courses': courses,
+        'books': books
+    }
+    return render(request,'dashboard.html',context)

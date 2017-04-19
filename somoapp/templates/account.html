@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static%}
+<div class="container-fluid">
+      <div class="row col-md-12">
+        <div class="col-sm-3 col-md-2 sidebar">
+
+          {% include 'include.html' %}
+
+        </div>
+        <div class="col-sm-9  col-md-10">
+
+            <section>
+             <form class="" method="POST" action="" autocomplete="off" >
+                 {%csrf_token%}
+                <div class="col-md-3 col-sm-3">
+                    <div class="form-group">
+                        <label for="search">Search</label>
+                        <input type="search" placeholder="search a book" id="book">
+                    </div>
+                    <!--/.form-group-->
+                </div>
+
+                 <div class="col-md-4 col-sm-3">
+                    <div class="form-group">
+                        <label for="Course">Course</label></br>
+
+                        <select>
+                            {% for course in courses %}
+                        <option>{{course.name}}</option>
+                            {% endfor %}
+                        </select>
+
+                    </div>
+                    <!--/.form-group-->
+                </div>
+                 <div class="col-md-2 col-sm-3">
+                    <div class="form-group">
+                        <label for="year">Year</label></br>
+                        <select>
+                            <option>year 1</option>
+                            <option>year 2</option>
+                            <option>year 3</option>
+                            <option>year 4</option>
+                            <option>year 5</option>
+                            <option>year 6</option>
+                            <option>year 7</option>
+                        </select>
+                        </div>
+                    </div>
+                    <!--/.form-group-->
+
+                 <div class="col-md-2 col-sm-2">
+                    <div class="form-group">
+                        <label for="semester">Semester</label></br>
+                        <select>
+                            <option>Semester 1</option>
+                            <option>Semester 2</option>
+                        </select>
+                        </div>
+                    </div>
+                    <!--/.form-group-->
+
+                 <div class="form-group">
+                     <button type="submit" class="btn btn-large btn-success" id="submit">Search</button>
+                 </div>
+              </form>
+
+            </section></br></br></br></br></br></br></br></br>
+
+
+            <section>
+
+                   <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Year</th>
+                  <th>Semester</th>
+                  <th>Course</th>
+                    <th>View Details</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for book in books %}
+
+                <tr>
+                  <td>{{book.title}}</td>
+                  <td>{{book.description}}</td>
+                  <td>{{book.year}}</td>
+                  <td>{{book.semester}}</td>
+
+                  <td>{{book.course}}</td>
+
+                    <td><a href="#" >Details</a></td>
+                </tr>
+                 {% endfor %}
+
+
+                </tbody>
+                <tfoot>
+                <tr>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Year</th>
+                  <th>Semester</th>
+                  <th>Course
+                    <th>View Details</th>
+                </tr>
+                </tfoot>
+              </table>
+
+            </section>
+         </div>
+
+        </div>
+      </div>
+
+
+
+
+
+
+{% endblock %}

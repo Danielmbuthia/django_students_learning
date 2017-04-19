@@ -1,6 +1,8 @@
 from django import forms
 from django.contrib.auth.models import User
 
+from somoapp.models import Book
+
 
 class LoginForm(forms.Form):
     model = User
@@ -79,3 +81,13 @@ class PasswordForm(forms.Form):
                                            'class':'form-control'
                                        }
                                    ))
+
+
+class Books(forms.Form):
+    model = Book
+    class Meta:
+        fields = {
+            'course',
+            'year',
+            'semester'
+        }

@@ -12,7 +12,7 @@ class Course(models.Model):
 
 
 class UserAccount(models.Model):
-    user = models.OneToOneField(User)
+    user = models.ManyToManyField(User)
     profile = models.IntegerField(default=0)
     course_id = models.ManyToManyField(Course)
     mobile = models.CharField(max_length=13)
@@ -22,7 +22,7 @@ class UserAccount(models.Model):
 
 
 class Book(models.Model):
-    user = models.OneToOneField(User)
+    user = models.ManyToManyField(User)
     isbn = models.CharField(max_length=80)
     title = models .CharField(max_length=80)
     description = models.CharField(max_length=80)

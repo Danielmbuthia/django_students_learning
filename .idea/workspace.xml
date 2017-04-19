@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4a1ac60-26d5-492f-b337-0e95a227e690" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/somoapp/migrations/0002_auto_20170419_0110.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/somoapp/templates/account.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/somoapp/templates/dashboard.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/somoapp/templates/download.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/somoapp/templates/include.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/somoapp/templates/requests.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/somoapp/templates/system.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/somoapp/templates/upload.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/somoapp/templates/users.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/somo/settings.py" afterPath="$PROJECT_DIR$/somo/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/somoapp/admin.py" afterPath="$PROJECT_DIR$/somoapp/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/somoapp/form.py" afterPath="$PROJECT_DIR$/somoapp/form.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/somoapp/templates/profile.html" afterPath="$PROJECT_DIR$/somoapp/templates/profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/somoapp/models.py" afterPath="$PROJECT_DIR$/somoapp/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/somoapp/templates/base.html" afterPath="$PROJECT_DIR$/somoapp/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/somoapp/templates/login.html" afterPath="$PROJECT_DIR$/somoapp/templates/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/somoapp/urls.py" afterPath="$PROJECT_DIR$/somoapp/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/somoapp/views.py" afterPath="$PROJECT_DIR$/somoapp/views.py" />
     </list>
@@ -28,13 +38,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="form.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="form.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/somoapp/form.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
+                <element signature="e#137#238#0" expanded="false" />
+                <element signature="e#277#1486#0" expanded="false" />
+                <element signature="e#1524#2668#0" expanded="false" />
+                <element signature="e#2708#3335#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -43,21 +57,17 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/somoapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="131" column="28" selection-start-line="131" selection-start-column="28" selection-end-line="131" selection-end-column="28" />
+            <state relative-caret-position="171">
+              <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
+                <element signature="e#1901#3989#0" expanded="false" />
+                <element signature="e#4019#4064#0" expanded="false" />
+                <element signature="e#4109#5867#0" expanded="false" />
+                <marker date="1492569144890" expanded="false" signature="6224:6268" ph="..." />
+                <marker date="1492569144890" expanded="false" signature="6309:6355" ph="..." />
+                <marker date="1492569144890" expanded="false" signature="6555:6599" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/somo/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -65,8 +75,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/somoapp/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="283">
+              <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="15" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
               </folding>
@@ -74,16 +84,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/somoapp/templates/profile.html">
+      <file leaf-file-name="include.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/somoapp/templates/include.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
-              <folding>
-                <element signature="e#933#939#0" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="e#1800#1806#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="account.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/somoapp/templates/account.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/somoapp/templates/users.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/somoapp/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,11 +127,19 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/somoapp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/somoapp/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -116,16 +160,26 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/somoapp/models.py" />
         <option value="$PROJECT_DIR$/somo/urls.py" />
-        <option value="$PROJECT_DIR$/somoapp/templates/login.html" />
         <option value="$PROJECT_DIR$/somoapp/templates/register.html" />
-        <option value="$PROJECT_DIR$/somoapp/templates/base.html" />
-        <option value="$PROJECT_DIR$/somoapp/urls.py" />
         <option value="$PROJECT_DIR$/somo/settings.py" />
         <option value="$PROJECT_DIR$/somoapp/templates/profile.html" />
-        <option value="$PROJECT_DIR$/somoapp/views.py" />
+        <option value="$PROJECT_DIR$/somoapp/templates/download.html" />
+        <option value="$PROJECT_DIR$/somoapp/templates/requests.html" />
+        <option value="$PROJECT_DIR$/somoapp/templates/system.html" />
+        <option value="$PROJECT_DIR$/somoapp/templates/upload.html" />
         <option value="$PROJECT_DIR$/somoapp/form.py" />
+        <option value="$PROJECT_DIR$/somoapp/models.py" />
+        <option value="$PROJECT_DIR$/somoapp/templates/account.html" />
+        <option value="$PROJECT_DIR$/somoapp/templates/dashboard.html" />
+        <option value="$PROJECT_DIR$/somoapp/templates/book.html" />
+        <option value="$PROJECT_DIR$/somoapp/urls.py" />
+        <option value="$PROJECT_DIR$/somoapp/admin.py" />
+        <option value="$PROJECT_DIR$/somoapp/templates/include.html" />
+        <option value="$PROJECT_DIR$/somoapp/views.py" />
+        <option value="$PROJECT_DIR$/somoapp/templates/base.html" />
+        <option value="$PROJECT_DIR$/somoapp/templates/users.html" />
+        <option value="$PROJECT_DIR$/somoapp/templates/login.html" />
       </list>
     </option>
   </component>
@@ -142,7 +196,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -160,8 +214,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -437,16 +491,32 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/somoapp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#32#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/somoapp/form.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#137#238#0" expanded="false" />
+            <element signature="e#277#1486#0" expanded="false" />
+            <element signature="e#1524#2668#0" expanded="false" />
+            <element signature="e#2708#3335#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -457,6 +527,12 @@
           <caret line="115" column="28" selection-start-line="115" selection-start-column="28" selection-end-line="115" selection-end-column="28" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
+            <element signature="e#1901#3989#0" expanded="false" />
+            <element signature="e#4019#4064#0" expanded="false" />
+            <element signature="e#4109#5867#0" expanded="false" />
+            <marker date="1492569144890" expanded="false" signature="6224:6268" ph="..." />
+            <marker date="1492569144890" expanded="false" signature="6309:6355" ph="..." />
+            <marker date="1492569144890" expanded="false" signature="6555:6599" ph="..." />
           </folding>
         </state>
       </provider>
@@ -485,6 +561,10 @@
           <caret line="85" column="37" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#137#238#0" expanded="false" />
+            <element signature="e#277#1486#0" expanded="false" />
+            <element signature="e#1524#2668#0" expanded="false" />
+            <element signature="e#2708#3335#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -495,6 +575,12 @@
           <caret line="111" column="50" selection-start-line="111" selection-start-column="50" selection-end-line="111" selection-end-column="50" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
+            <element signature="e#1901#3989#0" expanded="false" />
+            <element signature="e#4019#4064#0" expanded="false" />
+            <element signature="e#4109#5867#0" expanded="false" />
+            <marker date="1492569144890" expanded="false" signature="6224:6268" ph="..." />
+            <marker date="1492569144890" expanded="false" signature="6309:6355" ph="..." />
+            <marker date="1492569144890" expanded="false" signature="6555:6599" ph="..." />
           </folding>
         </state>
       </provider>
@@ -522,9 +608,9 @@
         <state relative-caret-position="825">
           <caret line="55" column="62" selection-start-line="55" selection-start-column="62" selection-end-line="55" selection-end-column="62" />
           <folding>
-            <element signature="e#933#939#0" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="e#1800#1806#0" expanded="true" />
+            <element signature="e#933#939#0" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="false" />
+            <element signature="e#1800#1806#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -534,7 +620,7 @@
         <state relative-caret-position="90">
           <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -545,6 +631,10 @@
           <caret line="85" column="37" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#137#238#0" expanded="false" />
+            <element signature="e#277#1486#0" expanded="false" />
+            <element signature="e#1524#2668#0" expanded="false" />
+            <element signature="e#2708#3335#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -555,6 +645,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
+            <element signature="e#1901#3989#0" expanded="false" />
+            <element signature="e#4019#4064#0" expanded="false" />
+            <element signature="e#4109#5867#0" expanded="false" />
+            <marker date="1492569144890" expanded="false" signature="6224:6268" ph="..." />
+            <marker date="1492569144890" expanded="false" signature="6309:6355" ph="..." />
+            <marker date="1492569144890" expanded="false" signature="6555:6599" ph="..." />
           </folding>
         </state>
       </provider>
@@ -582,9 +678,9 @@
         <state relative-caret-position="1290">
           <caret line="86" column="50" selection-start-line="86" selection-start-column="50" selection-end-line="86" selection-end-column="50" />
           <folding>
-            <element signature="e#933#939#0" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="e#1800#1806#0" expanded="true" />
+            <element signature="e#933#939#0" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="false" />
+            <element signature="e#1800#1806#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -594,7 +690,7 @@
         <state relative-caret-position="90">
           <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -605,6 +701,10 @@
           <caret line="32" column="20" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="20" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#137#238#0" expanded="false" />
+            <element signature="e#277#1486#0" expanded="false" />
+            <element signature="e#1524#2668#0" expanded="false" />
+            <element signature="e#2708#3335#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -622,6 +722,12 @@
           <caret line="90" column="44" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
+            <element signature="e#1901#3989#0" expanded="false" />
+            <element signature="e#4019#4064#0" expanded="false" />
+            <element signature="e#4109#5867#0" expanded="false" />
+            <marker date="1492569144890" expanded="false" signature="6224:6268" ph="..." />
+            <marker date="1492569144890" expanded="false" signature="6309:6355" ph="..." />
+            <marker date="1492569144890" expanded="false" signature="6555:6599" ph="..." />
           </folding>
         </state>
       </provider>
@@ -641,9 +747,9 @@
         <state relative-caret-position="60">
           <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
           <folding>
-            <element signature="e#933#939#0" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="e#1800#1806#0" expanded="true" />
+            <element signature="e#933#939#0" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="false" />
+            <element signature="e#1800#1806#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -660,7 +766,7 @@
         <state relative-caret-position="135">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -678,6 +784,10 @@
           <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#137#238#0" expanded="false" />
+            <element signature="e#277#1486#0" expanded="false" />
+            <element signature="e#1524#2668#0" expanded="false" />
+            <element signature="e#2708#3335#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -695,6 +805,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
+            <element signature="e#1901#3989#0" expanded="false" />
+            <element signature="e#4019#4064#0" expanded="false" />
+            <element signature="e#4109#5867#0" expanded="false" />
+            <marker date="1492569144890" expanded="false" signature="6224:6268" ph="..." />
+            <marker date="1492569144890" expanded="false" signature="6309:6355" ph="..." />
+            <marker date="1492569144890" expanded="false" signature="6555:6599" ph="..." />
           </folding>
         </state>
       </provider>
@@ -713,20 +829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/somo/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/somoapp/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" column="14" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/somoapp/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1">
@@ -734,20 +836,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/somoapp/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/somoapp/templates/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="35" column="99" selection-start-line="35" selection-start-column="99" selection-end-line="35" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/somoapp/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="195">
+          <caret line="13" column="127" selection-start-line="13" selection-start-column="127" selection-end-line="13" selection-end-column="127" />
         </state>
       </provider>
     </entry>
@@ -759,53 +851,165 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/somoapp/urls.py">
+    <entry file="file://$PROJECT_DIR$/somoapp/templates/download.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="405">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/somoapp/templates/register.html">
+    <entry file="file://$PROJECT_DIR$/somoapp/templates/requests.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="127" selection-start-line="13" selection-start-column="127" selection-end-line="13" selection-end-column="127" />
+        <state relative-caret-position="405">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/somoapp/templates/system.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/somoapp/templates/upload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/somoapp/templates/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+        <state relative-caret-position="234">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/somoapp/form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <element signature="e#933#939#0" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="e#1800#1806#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#137#238#0" expanded="false" />
+            <element signature="e#277#1486#0" expanded="false" />
+            <element signature="e#1524#2668#0" expanded="false" />
+            <element signature="e#2708#3335#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/somoapp/views.py">
+    <entry file="file://$PROJECT_DIR$/somoapp/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="131" column="28" selection-start-line="131" selection-start-column="28" selection-end-line="131" selection-end-column="28" />
+        <state relative-caret-position="283">
+          <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="15" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/somoapp/form.py">
+    <entry file="file://$PROJECT_DIR$/somoapp/templates/book.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        <state relative-caret-position="619">
+          <caret line="118" column="14" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/somoapp/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1770">
+          <caret line="118" column="14" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/somo/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/somoapp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/somoapp/templates/include.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/somoapp/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#24#63#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/somoapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+            <element signature="e#1901#3989#0" expanded="false" />
+            <element signature="e#4019#4064#0" expanded="false" />
+            <element signature="e#4109#5867#0" expanded="false" />
+            <marker date="1492569144890" expanded="false" signature="6224:6268" ph="..." />
+            <marker date="1492569144890" expanded="false" signature="6309:6355" ph="..." />
+            <marker date="1492569144890" expanded="false" signature="6555:6599" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/somoapp/templates/account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/somoapp/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/somoapp/templates/users.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/somoapp/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
