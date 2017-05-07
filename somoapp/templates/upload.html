@@ -10,13 +10,52 @@
         </div>
         <div class="col-sm-9  col-md-10">
 
-                   <table class="well">
-                     <thead>
-                     <tr>
-                         <th>welcome</th>
-                     </tr>
-                     </thead>
-                   </table>
+
+            <table id="example1" class="table table-bordered table-striped">
+
+                <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Unit</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                    {% for upload in uploads %}
+                <tr>
+                    <td>{{upload.title}}</td>
+                    <td>{{upload.description}}</td>
+                    <td>{{upload.unit}}</td>
+                </tr>
+                   {% endfor %}
+
+
+                </tbody>
+                <tfoot>
+                <tr>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Unit</th>
+
+                </tr>
+                </tfoot>
+            </table>
+
+            {%if messages%}
+                 {%for message in messages%}
+                   <div class="alert-success" style="padding:7px;border-radius:7px;moz-border-radius:7px;web-border-radius:7px;">{{message}}</div>
+                 {%endfor%}
+             {%endif%}
+             <form action="" method="post" enctype="multipart/form-data">{%csrf_token%}
+                {{form.as_p}}
+
+                 <div class="form-group">
+                    <button class="btn btn-warning" type="submit">Upload</button>
+                 </div>
+
+            </form>
+
         </div>
       </div>
 </div>

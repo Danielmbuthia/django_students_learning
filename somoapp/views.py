@@ -8,11 +8,11 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, render_to_response
 
 # Create your views here.
-from somoapp.form import LoginForm, RegisterForm, ProfileForm, PasswordForm
-from somoapp.models import UserAccount,Course, Book
+from somoapp.form import LoginForm, RegisterForm, ProfileForm, PasswordForm, Books, UploadForm
+from somoapp.models import UserAccount,Course, Book, MyDownload
 
 
 def login_d(request):
@@ -152,25 +152,76 @@ def profile(request):
 def account(request):
     courses = Course.objects.all()
     books = Book.objects.all()
+
     context = {
-        'courses': courses,
-        'books': books
-    }
+            'courses': courses,
+            'books': books,
+
+        }
     return render(request, 'account.html', context)
+
+
 
 
 @login_required
 def download(request):
-    return render(request,'download.html',{})
+    my_downloads = MyDownload.objects.all()
+    courses = Course.objects.all()
+    books = Book.objects.all()
+
+    if my_downloads == 0:
+        messages.add_message(request,messages.INFO,'No download done')
+    else:
+        context = {
+            'my_downloads':my_downloads,
+            'courses': courses,
+            'books': books,
+        }
+
+    return render(request,'download.html',context)
 
 
 @login_required
 def upload(request):
-    return render(request,'upload.html',{})
+    current_user = request.user
+    current_id=current_user.id
+    user_model = User.objects.filter(username=current_user.username).first().id
+    if current_id == user_model:
+        upload = Book.objects.all()
+    else:
+        messages.add_message(request,messages.INFO,'You have no upload done')
+
+    if request.method == 'POST':
+        form = UploadForm(request.POST,request.FILES)
+        if form.is_valid():
+            title = form.cleaned_data.get('title')
+            description = form.cleaned_data.get('description')
+            unit = form.cleaned_data.get('unit')
+            upload = form.cleaned_data.get('upload')
+
+
+            book = Book(
+                title = title,
+                description=description,
+                unit = unit,
+                upload = upload,
+
+            )
+            book.save()
+            messages.add_message(request,messages.INFO,'uploaded successfully')
+
+        else:
+            messages.add_message(request, messages.INFO, 'upload not successfully')
+    else:
+        form = UploadForm()
+    return render(request,'upload.html',{'form':form,
+                                         'upload':upload})
 
 
 @login_required
 def requests(request):
+
+
     return render(request,'requests.html',{})
 
 
@@ -197,3 +248,5 @@ def dashboard(request):
         'books': books
     }
     return render(request,'dashboard.html',context)
+
+

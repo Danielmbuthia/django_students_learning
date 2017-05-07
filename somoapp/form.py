@@ -67,7 +67,6 @@ class ProfileForm(forms.Form):
                                ))
 
 
-
 class PasswordForm(forms.Form):
     new_pass = forms.CharField(label='New Password',max_length=50,
                                widget=forms.PasswordInput(
@@ -86,8 +85,26 @@ class PasswordForm(forms.Form):
 class Books(forms.Form):
     model = Book
     class Meta:
-        fields = {
+
+        search_fields = {
             'course',
             'year',
             'semester'
         }
+
+
+class UploadForm(forms.Form):
+    upload = forms.FileField()
+    title = forms.CharField(label='Title',max_length=50,
+                            widget=forms.TextInput(attrs={
+                                'class':'form-control'
+                            }))
+    description = forms.CharField(label='Description',max_length=200,
+                                  widget=forms.Textarea(attrs={
+                                      'class':'form-control'
+                                  }))
+    unit = forms.CharField(label='Unit',max_length=50,
+                           widget=forms.TextInput(attrs={
+                               'class':'form-control'
+                           }))
+
